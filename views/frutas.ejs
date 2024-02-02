@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frutas</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1><%= titulo %></h1>
+
+      <form action="/frutas" method="post">
+        <label for="nombre">Fruta:</label>
+        <input type="text" id="fruta" name="fruta" />
+
+        <button type="submit" id="btnAgregar">Agregar</button>
+
+        <ul>
+          <% for (const fruta of frutas){ %>
+          <li><%= fruta %></li>
+          <% } %>
+        </ul>
+      </form>
+    </div>
+  </body>
+</html>
